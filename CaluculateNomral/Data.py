@@ -94,7 +94,7 @@ def MaskedSample():
     # Beach = np.array(b)
     # print("shape", Beach)
 
-    return results,mask2
+    return results,mask2,image
 
 def Dirction_of_Lights():
     read = np.load('/Users/nicolas/Desktop/MasterProject/TiF/01aug 2.npy')
