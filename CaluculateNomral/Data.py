@@ -49,9 +49,9 @@ def MaskedSample():
     egde = cv.Canny(mid, 0,200)
 
     contours,hierarchy = cv.findContours(egde,cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
-    # contour = max(contours, key=cv.contourArea)
+    # contour = contours[2]
     mask = np.zeros_like(normaliz)
-    mask1 = cv.drawContours(mask,contours,-1,(255,255,255),-1)
+    mask1 = cv.drawContours(mask,contours,2,(255,255,255),-1)
     mask2 = mask1.flatten()
     # print(mask2.shape)
     # print(mask2[231764])
@@ -97,7 +97,7 @@ def MaskedSample():
     return results,mask2,image
 
 def Dirction_of_Lights():
-    read = np.load('/Users/nicolas/Desktop/MasterProject/TiF/01aug 2.npy')
+    read = np.load('/Users/nicolas/PycharmProjects/Photometric_Stereo_Normals_and_Surface/CaluculateNomral/aug.npy')
     dirsoflights= np.array(read)
     return dirsoflights
 

@@ -41,21 +41,28 @@ def lsqusenormalequation():
          # print('B',B.shape)
          solution = np.linalg.inv(A.T.dot(A)).dot(A.T).dot(B)
          # print('solution', solution.shape)
-         unit = math.sqrt((solution[0,0]**2)+(solution[1,0]**2)+(solution[2,0]**2))
-         solution = solution/unit
+
+
+         #
+         # unit = math.sqrt((solution[0,0]**2)+(solution[1,0]**2)+(solution[2,0]**2))
+         # normall= solution/unit
          albedo = math.sqrt((solution[0, 0] ** 2) + (solution[1, 0] ** 2) + (solution[2, 0] ** 2))
          print('abledo',albedo)
          normall = solution / albedo
 
 
          # solution2.append(solution)
+
          solutions.append(normall)
-         albedos.append(albedo)
+         # albedos.append(albedo)
 
 
 
     normal = np.array(solutions).reshape(-1,3)
+
+
     # unnor = np.array(solution2).reshape(-1,3)
+    print(normal)
 
     # print('normal',normal.shape)
 
@@ -68,6 +75,7 @@ def lsqusenormalequation():
     p = 0
     q = 0
     fig = plt.figure()
+
     plt.gray()
     ax = fig.add_subplot()
 
@@ -76,12 +84,12 @@ def lsqusenormalequation():
             if recover[ii,jj] !=0:
                 X = (jj + x[q])
                 Y = (ii + y[q])
-                Z = (z[q])
+                # Z = (z[q])
                 # ax.scatter(X,Y,Z)
-                ax.plot([jj,X],[ii,Y])
+                ax.plot([jj,X],[ii,Y],c='black')
                 q = q+1
 
-    ax.imshow(recover)
+
 
     plt.show()
 
