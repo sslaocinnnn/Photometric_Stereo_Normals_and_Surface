@@ -37,8 +37,7 @@
 # #
 #
 #
-# if __name__ == 'ObjReadSIF':
-#     readsif('/Users/nicolas/Desktop/MasterProject/SIFData/robber')
+
 #
 #
 #
@@ -80,10 +79,10 @@
 # # cv.destroyAllWindows()
 import tifffile
 objimage = []
-# def objreadtif(pathofrobber= '/Users/nicolas/Desktop/MasterProject/TiF/01aug 2/robber_5/robber_5_MMStack_Pos0.ome.tif',pathofpositions = '/Users/nicolas/Desktop/MasterProject/TiF/01aug 2/robberposition/MMStack_Pos0.ome.tif',Shape =None):
+# def objreadtif(pathofrobber= '',pathofpositions = '',Shape =None):
 def objreadtif(
-            pathofrobber='/Users/nicolas/Desktop/MasterProject/TiF/01aug 2/_1/_1_MMStack_Pos0.ome.tif',
-            pathofpositions='/Users/nicolas/Desktop/MasterProject/TiF/01aug 2/ballposition/MMStack_Pos0.ome.tif',
+            pathofrobber='',
+            pathofpositions='',
             Shape=None):
     read_image = tifffile.imread(pathofrobber)
     read_positions = tifffile.imread(pathofpositions)

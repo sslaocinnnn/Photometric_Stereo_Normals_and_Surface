@@ -97,7 +97,7 @@ def MaskedSample():
     return results,mask2,image
 
 def Dirction_of_Lights():
-    read = np.load('/Users/nicolas/PycharmProjects/Photometric_Stereo_Normals_and_Surface/CaluculateNomral/aug.npy')
+    read = np.load('')
     dirsoflights= np.array(read)
     return dirsoflights
 
