@@ -1,4 +1,4 @@
-import math
+
 
 import numpy as np
 import scipy as sp
@@ -15,7 +15,7 @@ alldata = Data.MaskedSample()
 mask = alldata[1]
 mask1 = alldata[3]
 print('mask shape:',mask.shape)
-np.save('../Datas/mask.npy', mask1)
+np.save('Datas/Mask.npy', mask1)
 pic = cv.normalize(alldata[2],None,0,255,cv.NORM_MINMAX,dtype=cv.CV_8UC1)
 
 # cv.imshow('1',robberman[0])
@@ -52,7 +52,7 @@ def lsqusenormalequation():
     normal = sk.normalize(solution, axis=1)
 
     N = np.reshape(normal,(1040,1392,3))
-    np.save('../Datas/N.npy', N)
+    np.save('Datas/Normal.npy', N)
 
 
 

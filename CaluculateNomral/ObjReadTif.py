@@ -80,9 +80,11 @@ import numpy as np
 import tifffile
 objimage = []
 # def objreadtif(pathofrobber= '',pathofpositions = '',Shape =None):
-def objreadtif(pathofrobber='../Datas/robber.tif',pathofpositions='../Datas/robberpos.tif',Shape=None):
+def objreadtif(pathofrobber='',pathofpositions='',Shape=None):
     read_image = tifffile.imread(pathofrobber)
+    np.save('',read_image)
     read_positions = tifffile.imread(pathofpositions)
+    np.save('', read_positions)
     # read_positions = sum(read_positions[0:read_image.shape[0]])
 
     if Shape == None:

@@ -28,8 +28,8 @@ import matplotlib.pyplot as plt
 #         print("Specific Data Selected, Picture NO.",number +1)
 #         Data = info[number]
 #     return Data
-image = ObjReadTif.objreadtif(Shape=1)
-images = ObjReadTif.objreadtif()
+image = np.load('Datas/RobberPos.npy')
+images = np.load('Datas/Robber.npy')
 
 print(len(images))
 #
@@ -99,7 +99,7 @@ def MaskedSample():
     return results,mask2,image,mask1
 
 def Dirction_of_Lights():
-    read = np.load('../Datas/LEDs.npy')
+    read = np.load('Datas/LEDs.npy')
     dirsoflights= np.array(read)
     return dirsoflights
 

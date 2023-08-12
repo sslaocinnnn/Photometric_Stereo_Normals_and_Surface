@@ -4,9 +4,9 @@ from mpl_toolkits.mplot3d import Axes3D
 import scipy as sp
 import cv2 as cv
 
-N = np.load('../Datas/N.npy')
+N = np.load('Datas/Normal.npy')
 
-mask = np.load('../Datas/mask.npy')
+mask = np.load('Datas/Mask.npy')
 
 
 index_y, index_x = np.where(mask!=0)
